@@ -1,13 +1,17 @@
 #!/bin/bash
 
-# install & configure nginx
+# -----------------------------------------------------------
+# Step1 - Install & Configure NGINX
+# -----------------------------------------------------------
 sudo su -
 apt update
 apt install -y nginx
 
 export PUB_HOSTNAME=$(ec2metadata --public-hostname)
 
-# install & configure code-server
+# -----------------------------------------------------------
+# Step2 - Install & Configure code-server
+# -----------------------------------------------------------
 mkdir ~/code-server && cd ~/code-server
 wget https://github.com/coder/code-server/releases/download/v4.8.2/code-server-4.8.2-linux-amd64.tar.gz
 tar -xzvf code-server-4.8.2-linux-amd64.tar.gz
