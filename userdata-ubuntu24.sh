@@ -12,8 +12,10 @@ export PUB_HOSTNAME=$(ec2metadata --public-hostname)
 # Step2 - Install & Configure code-server
 # -----------------------------------------------------------
 mkdir ~/code-server && cd ~/code-server
-wget https://github.com/coder/code-server/releases/download/v4.8.2/code-server-4.8.2-linux-amd64.tar.gz
-tar -xzvf code-server-4.8.2-linux-amd64.tar.gz
+# wget https://github.com/coder/code-server/releases/download/v4.8.2/code-server-4.8.2-linux-amd64.tar.gz
+wget https://github.com/coder/code-server/releases/download/v4.95.3/code-server-4.95.3-linux-amd64.tar.gz
+# tar -xzvf code-server-4.8.2-linux-amd64.tar.gz
+tar -xzvf code-server-4.95.3-linux-amd64.tar.gz
 cp -r code-server-4.8.2-linux-amd64 /usr/lib/code-server
 ln -s /usr/lib/code-server/bin/code-server /usr/bin/code-server
 mkdir /var/lib/code-server
